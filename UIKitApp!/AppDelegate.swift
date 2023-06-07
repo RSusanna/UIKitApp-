@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  UIKitApp!
 //
-//  Created by Susanna Zakaryan on 06.06.2023.
+//  Created by Susanna R on 06.06.2023.
 //
 
 import UIKit

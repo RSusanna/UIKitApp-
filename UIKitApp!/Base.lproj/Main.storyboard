@@ -33,26 +33,64 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="8yW-nY-xKx">
+                                <rect key="frame" x="14" y="183.66666666666666" width="347" height="31"/>
+                                <connections>
+                                    <action selector="sliderValue:" destination="BYZ-38-t0r" eventType="valueChanged" id="aAI-LQ-tjj"/>
+                                </connections>
+                            </slider>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите информацию" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RaQ-Iv-i7q">
+                                <rect key="frame" x="16" y="241.66666666666663" width="343" height="36"/>
+                                <color key="backgroundColor" red="0.34048454039999998" green="0.88745033819999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="xDM-I5-Hko"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OJR-tn-1rC">
+                                <rect key="frame" x="16" y="345.66666666666669" width="343" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Tg9-cm-zfn"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <connections>
+                                    <action selector="mainButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bvd-lc-5Yy"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGray3Color"/>
                         <constraints>
+                            <constraint firstItem="OJR-tn-1rC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="BLH-Is-kBp"/>
                             <constraint firstItem="ykF-n6-NVn" firstAttribute="top" secondItem="bCt-Zt-QWE" secondAttribute="bottom" constant="42" id="H8L-UV-FdU"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ykF-n6-NVn" secondAttribute="trailing" constant="16" id="Kvl-1K-nEl"/>
+                            <constraint firstItem="RaQ-Iv-i7q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="NMi-KS-1Fx"/>
+                            <constraint firstItem="RaQ-Iv-i7q" firstAttribute="top" secondItem="8yW-nY-xKx" secondAttribute="bottom" constant="28" id="PvW-5o-8pj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OJR-tn-1rC" secondAttribute="trailing" constant="16" id="U5A-Wx-NxR"/>
+                            <constraint firstItem="OJR-tn-1rC" firstAttribute="top" secondItem="RaQ-Iv-i7q" secondAttribute="bottom" constant="68" id="Wvm-tw-fc8"/>
+                            <constraint firstItem="8yW-nY-xKx" firstAttribute="top" secondItem="ykF-n6-NVn" secondAttribute="bottom" constant="20" id="cUt-36-P2d"/>
                             <constraint firstItem="bCt-Zt-QWE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="dxG-4u-Uac"/>
                             <constraint firstItem="bCt-Zt-QWE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="gck-3a-QMy"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bCt-Zt-QWE" secondAttribute="trailing" constant="30" id="kgN-uB-Jbr"/>
                             <constraint firstItem="ykF-n6-NVn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="ooy-Yl-KG4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RaQ-Iv-i7q" secondAttribute="trailing" constant="16" id="qCC-E9-Dn8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8yW-nY-xKx" secondAttribute="trailing" constant="16" id="x3k-2Z-Szs"/>
+                            <constraint firstItem="8yW-nY-xKx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="xEz-Ue-QSm"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="mainButton" destination="OJR-tn-1rC" id="80z-6n-vXj"/>
                         <outlet property="mainLabel" destination="ykF-n6-NVn" id="zWP-cK-70C"/>
                         <outlet property="segmentedControll" destination="bCt-Zt-QWE" id="Fgt-rt-yP3"/>
+                        <outlet property="slider" destination="8yW-nY-xKx" id="htu-tM-KBc"/>
+                        <outlet property="textField" destination="RaQ-Iv-i7q" id="S8f-hR-iyc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-64.799999999999997" y="-28.335832083958024"/>
+            <point key="canvasLocation" x="-64.799999999999997" y="-28.817733990147783"/>
         </scene>
     </scenes>
     <resources>
