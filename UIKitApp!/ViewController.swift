@@ -14,10 +14,9 @@ class ViewController: UIViewController {
     @IBOutlet var slider: UISlider!
     @IBOutlet var textField: UITextField!
     @IBOutlet var mainButton: UIButton!
-
-
-
-    //textField
+    @IBOutlet var datePicker: UIDatePicker!
+    @IBOutlet var switchForm: UISwitch!
+    
     
     //MARK: Segmented Controll
     override func viewDidLoad() {
@@ -41,6 +40,7 @@ class ViewController: UIViewController {
         
         //MARK: TextField
         textField.backgroundColor = .white
+        textField.keyboardType = .numberPad
         //MARK: MainButton
       //  mainButton.layer.cornerRadius = 10 // скруглили края
         mainButton.setTitle("готово", for: .normal)
@@ -51,13 +51,9 @@ class ViewController: UIViewController {
         guard let text = textField.text, !text.isEmpty  else { return }
         mainLabel.text = text
         }
-
-    
-    
     @IBAction func sliderValue(_ sender: Any) {
         mainLabel.text = String(Int(slider.value))
     }
-    
     @IBAction func segmentedControllAction(_ sender: Any) {
         
         switch segmentedControll.selectedSegmentIndex {
@@ -72,7 +68,20 @@ class ViewController: UIViewController {
             mainLabel.textColor = .red
         default: break
         }
-        
+    }
+    @IBAction func datePicker(_ sender: Any) {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .full
+        mainLabel.text = dateFormatter.string(from: datePicker.date)
     }
     
+    @IBAction func toggleElements(_ sender: Any) {
+        segmentedControll.isHidden = !switchForm.isOn
+        mainLabel.isHidden = !switchForm.isOn
+        mainButton.isHidden = !switchForm.isOn
+        slider.isHidden = !switchForm.isOn
+        textField.isHidden = !switchForm.isOn
+        mainLabel.isHidden = !switchForm.isOn
+        datePicker.isHidden = !switchForm.isOn 
+    }
 }
